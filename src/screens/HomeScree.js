@@ -11,12 +11,49 @@ export default function HomeScreen({ setActiveTab }) {
         className="mx-auto rounded-lg shadow-lg max-h-80"
       />
 
-      <button
-        onClick={() => setActiveTab("profile")}
-        className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
-      >
-        🐾 Wejście
-      </button>
+      <div className="space-y-3">
+        <button
+          onClick={() => setActiveTab("profile")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          🐾 Wejście do Profilu
+        </button>
+
+        <button
+          onClick={() => setActiveTab("gallery")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          📸 Galeria
+        </button>
+
+        <button
+          onClick={() => setActiveTab("spots")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          📍 Labrador Spoty
+        </button>
+
+        <button
+          onClick={() => setActiveTab("guide")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          🧠 Poradnik
+        </button>
+
+        <button
+          onClick={() => setActiveTab("forum")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          💬 Forum
+        </button>
+
+        <button
+          onClick={() => setActiveTab("tracker")}
+          className="bg-yellow-400 text-white px-6 py-2 rounded-full shadow hover:bg-yellow-500 transition"
+        >
+          🐾 Tracker Aktywności
+        </button>
+      </div>
     </div>
   );
 }
