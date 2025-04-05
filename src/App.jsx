@@ -1,4 +1,3 @@
-// JavaScript Documentimport { useState } from "react";
 import React, { useState } from "react";
 import HomeScreen from "./screens/HomeScreen";
 
@@ -11,10 +10,6 @@ export default function App() {
         <h1 className="text-3xl font-bold">🐾 LabrApp</h1>
         <p className="text-sm">Twoje centrum dla labradora</p>
       </header>
-
-      <nav className="flex justify-around bg-white p-2 shadow-md flex-wrap">
-        <button onClick={() => setActiveTab("home")}>🏠 Home</button>
-      </nav>
 
       <main className="p-4">
         {activeTab === "home" && <HomeScreen setActiveTab={setActiveTab} />}
