@@ -5,11 +5,11 @@ export default function HomeScreen({ setActiveTab }) {
         ?? Witaj w swiecie labków!
       </h2>
 
-      <img
-        src="/moj-labrador.jpg"
-        alt="Mój labrador"
-        className="mx-auto rounded-lg shadow-lg max-h-80"
-      />
+<img
+  src="/moj-labrador.jpg"
+  alt="Mój labrador"
+  className="mx-auto rounded-lg shadow-lg max-h-80"
+/>
 
       <div className="space-y-3">
         <button

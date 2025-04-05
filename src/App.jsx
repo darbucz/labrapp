@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import HomeScreen from "./screens/HomeScreen";
+import TrackerScreen from "./screens/TrackerScreen";
+
 
 export default function App() {
   const [activeTab, setActiveTab] = useState("home");
@@ -13,6 +15,7 @@ export default function App() {
 
       <main className="p-4">
         {activeTab === "home" && <HomeScreen setActiveTab={setActiveTab} />}
+		{activeTab === "tracker" && <TrackerScreen />}  
       </main>
     </div>
   );
