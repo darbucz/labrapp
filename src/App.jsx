@@ -16,7 +16,7 @@ export default function App() {
       </nav>
 
       <main className="p-4">
-        {activeTab === "home" && <HomeScreen />}
+        {activeTab === "home" && <HomeScreen setActiveTab={setActiveTab} />}
       </main>
     </div>
   );
