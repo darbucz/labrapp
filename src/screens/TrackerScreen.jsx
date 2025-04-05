@@ -5,7 +5,7 @@ import { Chart, CategoryScale, LinearScale, PointElement, LineElement } from "ch
 // Rejestracja komponentów Chart.js
 Chart.register(CategoryScale, LinearScale, PointElement, LineElement);
 
-export default function TrackerScreen() {
+export default function TrackerScreen({ setActiveTab }) {
   const [historia, setHistoria] = useState([
     { data: "02.04", kroki: 7200, czas: "1h 45min" },
     { data: "03.04", kroki: 5400, czas: "1h 05min" },
@@ -42,8 +42,17 @@ export default function TrackerScreen() {
 
   return (
     <div className="p-6 max-w-3xl mx-auto space-y-6">
-      <h2 className="text-3xl font-bold text-yellow-600 text-center">🐾 Tracker aktywności</h2>
+      <div className="flex items-center justify-between">
+        <h2 className="text-3xl font-bold text-yellow-600">🐾 Tracker aktywności</h2>
+        <button
+          onClick={() => setActiveTab("home")}
+          className="text-sm text-yellow-600 border border-yellow-400 px-3 py-1 rounded hover:bg-yellow-100 transition"
+        >
+          ⬅️ Powrót do menu
+        </button>
+      </div>
 
+      {/* Formularz */}
       <div className="bg-white p-4 rounded shadow space-y-4">
         <div className="flex flex-col md:flex-row gap-4">
           <input
@@ -65,4 +74,27 @@ export default function TrackerScreen() {
             className="bg-yellow-400 px-4 py-2 rounded text-white font-semibold hover:bg-yellow-500 transition"
           >
             ➕ Dodaj
-          </button
+          </button>
+        </div>
+      </div>
+
+      {/* Wykres */}
+      <div className="bg-white p-4 rounded shadow">
+        <Line data={wykresDanych} />
+      </div>
+
+      {/* Historia */}
+      <div className="space-y-2">
+        <h3 className="font-semibold text-lg">📅 Historia</h3>
+        <ul className="space-y-1 text-sm">
+          {historia.map((e, i) => (
+            <li key={i} className="bg-gray-50 p-2 rounded shadow flex justify-between">
+              <span>{e.data}</span>
+              <span>{e.kroki} kroków – {e.czas}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}

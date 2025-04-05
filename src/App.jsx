@@ -15,7 +15,7 @@ export default function App() {
 
       <main className="p-4">
         {activeTab === "home" && <HomeScreen setActiveTab={setActiveTab} />}
-		{activeTab === "tracker" && <TrackerScreen />}  
+		{activeTab === "tracker" && <TrackerScreen setActiveTab={setActiveTab} />}
       </main>
     </div>
   );
