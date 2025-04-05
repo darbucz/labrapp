@@ -42,6 +42,39 @@
             Labradory są inteligentne i chętne do nauki. Najlepiej działają pozytywne metody
             szkolenia (nagrody zamiast kar).
           </p>
+			<div className="bg-white p-4 rounded shadow">
+  <h3 className="text-xl font-semibold mb-2">🌐 Polecane artykuły</h3>
+  <ul className="list-disc pl-6 text-blue-600 space-y-2 text-sm">
+    <li>
+      <a
+        href="https://piesotto.pl/jak-dbac-o-labradora/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Jak dbać o labradora? – Piesotto
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://zwierzakbezpieczny.pl/zywienie-labradora/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Żywienie labradora – co warto wiedzieć?
+      </a>
+    </li>
+    <li>
+      <a
+        href="https://pl.wikipedia.org/wiki/Labrador_retriever"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Wikipedia: Labrador Retriever
+      </a>
+    </li>
+  </ul>
+</div>
+
         </div>
       </div>
     </div>
